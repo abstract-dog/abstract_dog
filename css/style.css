@@ -1,0 +1,33 @@
+.navbar-toggler {
+  outline: none!important;
+}
+
+.navbar-toggler:hover {background: #e6e6e6}
+
+.footer-vision {background: #49c5b6}
+
+#header-hidden {}
+
+#img-elena {
+  height: 250px;
+  width: 250px!important;
+}
+
+.img-header-box {border: 2px solid #49317a}
+
+.main-box {background: #332156!important}
+
+.load-box {
+  outline: none;
+}
+
+.load-box:hover {
+  
+}
+
+footer {
+  padding: 30px 0;
+  color: #333;
+  text-align: center;
+  background-color: #49c5b6;
+}
