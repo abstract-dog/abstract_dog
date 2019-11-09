@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
+# from PIL import Image
+# from potrace import Bitmap
+
 
 UPLOAD_FOLDER = '/path/to/the/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -24,6 +27,14 @@ def upload_file():
         f = request.files['file']
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
     return 'file uploaded successfully'
+
+# def asdfa():
+#     im = Image.open('/Users/egurov/projects/hackathon/hack.Genesis/abstract_dog/img_storage/1.jpg')
+#     im.save('Foto.png')
+#     bitmap = Bitmap('Foto.png')
+#     path = bitmap.trace()
+
+# asdfa()
 
 if __name__ == '__main__':
     app.run(debug = True)
