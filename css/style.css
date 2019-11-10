@@ -22,7 +22,7 @@
 }
 
 .load-box:hover {
-  
+
 }
 
 footer {
@@ -30,4 +30,12 @@ footer {
   color: #333;
   text-align: center;
   background-color: #49c5b6;
+}
+
+.strelka {font-size: 130px}
+
+@media (max-width: 767px) {
+  .strelka {
+    transform: rotate(90deg);
+  }
 }
