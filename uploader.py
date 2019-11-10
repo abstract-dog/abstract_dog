@@ -17,9 +17,10 @@ UPLOAD_FOLD = '/Users/egurov/projects/hackathon/hack.Genesis/abstract_dog/img_st
 UPLOAD_FOLDER = os.path.join(APP_ROOT, UPLOAD_FOLD)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/upload')
+@app.route('/')
 def load_file():
-    return render_template('upload.html')
+    return render_template('index.html')
+    return render_template("index.html")
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
@@ -121,4 +122,4 @@ def convert_to_svg(full_jpg_file_path, headers):
 # asdfa()
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host='0.0.0.0', port=8011, debug = True)
