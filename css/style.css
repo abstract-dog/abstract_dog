@@ -39,3 +39,8 @@ footer {
     transform: rotate(90deg);
   }
 }
+
+.border-self {
+  border: 3px solid white;
+  border-radius: 5px;
+}
