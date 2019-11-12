@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import base64
 import requests
+from config import convertio_co_api_key
 
 
 UPLOAD_FOLDER = '/path/to/the/uploads'
