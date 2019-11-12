@@ -69,7 +69,7 @@ def convert_to_svg(full_jpg_file_path, headers):
     with open(full_jpg_file_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     url = "http://api.convertio.co/convert"
-    payload = "{\"apikey\" : \"91d6aec6f706564d03d22e730c449e1e\", \"input\" : \"base64\", \"file\" : \"" + encoded_string.decode("utf-8") + "\", \"filename\" : \"test1.jpg\",\"outputformat\":\"svg\"}"
+    payload = "{\"apikey\" : \"" + convertio_co_api_key + "\", \"input\" : \"base64\", \"file\" : \"" + encoded_string.decode("utf-8") + "\", \"filename\" : \"test1.jpg\",\"outputformat\":\"svg\"}"
 
     response = requests.request("POST", url, data=payload, headers=headers).json()
     return response["data"]["id"]
